@@ -1,0 +1,20 @@
+<div class='category'>
+  <hr/>
+  <p>All categories</p>
+  <ng-container class='categories' *ngIf='is_categories; else noCat'></ng-container>
+  <ng-container *ngFor="let category of (category$ | async)">
+    <table>
+      <tr>
+        <td (click)='get_category(category.music_streaming)'>{{ category.music_streaming }}</td>
+        <td (click)='get_category(category.online_storage)'>{{ category.online_storage }}</td>
+        <td (click)='get_category(category.online_streaming)'>{{ category.online_streaming }}</td>
+      </tr>
+      <tr>
+        <td (click)='get_category(category.gym_membership)'>{{ category.gym_membership }}</td>
+      </tr>
+    </table>
+  </ng-container>
+  <ng-template #noCat>
+    <p>No Category</p>
+  </ng-template>
+</div>
