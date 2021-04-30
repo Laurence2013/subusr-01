@@ -1,30 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Dosis:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
 
-.category {
-  padding-top: 5%;
-  width: 70%;
-  display: block;
-  margin: 0 auto;
+
+mat-grid-tile {
+  background: #282828;
 }
-.category p {
+/*p {
   font-family: 'Dosis', sans-serif;
   font-size: 1.7em;
   text-align: center;
   weight: 400;
-}
-table {
+}*/
+/*.category {
+  padding-top: 5%;
   display: block;
   margin: 0 auto;
-}
-table tr td {
+  background: #282828;
+}*/
+/*table {
+  display: block;
+  margin: 0 auto;
+}*/
+/*table tr td {
   font-family: 'Dosis', sans-serif;
   font-size: 1.5em;
   text-align: center;
-  width: 20%;
+  //width: 20%;
   text-decoration: underline;
   text-decoration-color: #EF6565;
   color: #DE2184;
-}
-table tr:nth-child(2) td {
+}*/
+/*table tr:nth-child(2) td {
   padding-top: 5%;
-}
+}*/
