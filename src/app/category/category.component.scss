@@ -1,34 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Dosis:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
 
-
-mat-grid-tile {
-  background: #282828;
-}
-/*p {
+p {
   font-family: 'Dosis', sans-serif;
   font-size: 1.7em;
   text-align: center;
   weight: 400;
-}*/
-/*.category {
+}
+.category {
   padding-top: 5%;
   display: block;
   margin: 0 auto;
-  background: #282828;
-}*/
-/*table {
-  display: block;
-  margin: 0 auto;
-}*/
-/*table tr td {
+  //background: lightblue; - for testing
+}
+table {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 3px solid green; - for testing
+}
+table tr {}
+table tr td {
   font-family: 'Dosis', sans-serif;
   font-size: 1.5em;
   text-align: center;
-  //width: 20%;
   text-decoration: underline;
   text-decoration-color: #EF6565;
   color: #DE2184;
-}*/
-/*table tr:nth-child(2) td {
+    //border: 3px solid green; - for testing
+}
+table tr:nth-child(2) td {
   padding-top: 5%;
-}*/
+}
+@media screen and (max-width: 750px) {
+  table {
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    //border: 3px solid green; - for testing
+  }
+  table tr td {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    //border: 3px solid green; - for testing
+  }
+  table tr td {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+}
