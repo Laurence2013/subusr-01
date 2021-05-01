@@ -22,12 +22,12 @@ export class CategoryService {
         })
       );
   }
-  public getACategory(category: string): Observable<Category[]> {
+  public getACategory(category: string): Observable<{}> {
     return this.db.collection(category)
       .snapshotChanges().pipe(
         map(snaps => {
           return snaps.map(snap => {
-            return <Category> { ...snap.payload.doc.data() as Category };
+            return <{}> { ...snap.payload.doc.data() as {} };
           })
         })
       );

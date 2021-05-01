@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Dosis:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
 
-p {
+mat-list {
+  display: flex;
+  justify-content: right;
+  background: lightblue; // - for testing
+}
+
+mat-list mat-list-item {
   font-family: 'Dosis', sans-serif;
   font-size: 1.2em;
   text-align: center;
-  //border: 3px solid green; // - for testing
+  // border: 3px solid green; // - for testing
 }
 
 .container {
