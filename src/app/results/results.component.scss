@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Dosis:wght@500&family=Noto+Sans+JP:wght@300&display=swap');
+
+p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  //border: 3px solid green; // - for testing
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  //border: 3px solid green; // - for testing
+  //background: lightblue; // - for testing
+}
+.container2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.search-container {
+  display: flex;
+  justify-content: left; 
+  //border: 3px solid green; // - for testing
+}
+.search-container .logo {
+  //border: 3px solid green; // - for testing
+  padding-top: 13px;
+  width: 180px;
+}
+.search-container div p {
+  font-family: 'Dosis', sans-serif;
+  float: left;
+}
+.search-form {
+  padding-top: 20px;
+  //border: 3px solid green; // - for testing
+  width: 100%;
+}
+.search-form input {
+  margin: 0 auto;
+  width: 85%;
+  height: 40px;
+  padding: 0 5px;
+  font-size: 1.4rem;
+  border: 1px solid #D0CFCE;
+  border-radius: 20px;
+}
+a img.search-icon {
+  position: relative;
+  float: right;
+  width: 35px;
+  top: 2px;
+  right: 15%;
+}
+@media screen and (max-width: 1200px) {
+  .search-container {
+    padding-top: 20px;
+  }
+  .search-container .logo {
+    content: url('../../assets/logo-02.png');
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    //border: 3px solid green; // - for testing
+  }
+  .container2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .search-form {
+    padding-top: 20px;
+    //border: 3px solid green; // - for testing
+  }
+  .search-form input {
+    width: 83%;
+    font-size: 1rem;
+  }
+  a img.search-icon {
+    width: 30px;
+    top: 10%;
+    right: 17%;
+    content: url('../../assets/zoom-74.png');
+  }
+}
+@media screen and (max-width: 500px) {
+  .search-container .logo {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    //border: 3px solid green; // - for testing
+  }
+  .search-form input {
+    width: 95%;
+  }
+  a img.search-icon {
+    width: 30px;
+    top: -50%;
+    right: 5%;
+    content: url('../../assets/zoom-74.png');
+  }
+}
+@media screen and (max-width: 450px) {
+  .search-form {
+    width: 100%;
+    //border: 3px solid green; // - for testing
+    padding-right: 10px;
+  }
+  .search-form input::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+  .search-form input::-moz-input-placeholder {
+    font-size: 10px;
+  }
+  .search-form input::-ms-input-placeholder {
+    font-size: 10px;
+  }
+  a img.search-icon {
+    content: url('../../assets/zoom-74.png');
+  }
+}
+@media screen and (max-width: 320px) {
+  .search-form {
+    width: 100%;
+    //border: 3px solid green; // - for testing
+    padding-right: 15px;
+  }
+  .search-form input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .search-form input::-moz-input-placeholder {
+    color: transparent;
+  }
+  .search-form input::-ms-input-placeholder {
+    color: transparent;
+  }
+}

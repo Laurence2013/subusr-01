@@ -1,0 +1,14 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 345px) {
+  footer {
+    width: 100%;
+    left: 0;
+    height: 30%;
+  }
+}
+
