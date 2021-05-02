@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Category } from '../../model/category';
+import { OnlineStorage } from '../../model/online-storage';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +23,12 @@ export class CategoryService {
         })
       );
   }
-  public getACategory(category: string): Observable<{}> {
+  public getACategory(category: string): Observable<OnlineStorage[]> {
     return this.db.collection(category)
       .snapshotChanges().pipe(
         map(snaps => {
           return snaps.map(snap => {
-            return <{}> { ...snap.payload.doc.data() as {} };
+            return <OnlineStorage> { ...snap.payload.doc.data() as OnlineStorage };
           })
         })
       );

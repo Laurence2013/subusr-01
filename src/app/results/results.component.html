@@ -9,9 +9,10 @@
         <a href="#"><img class="search-icon" src="../../assets/zoom-73.png"></a>
       </form>
     </div>
-    <ng-container *ngFor="let result of (results$ | async); let num = index">
+    <ng-container *ngFor="let result of (results$ | async)">
       <mat-list>
-        <mat-list-item>{{ result }}</mat-list-item>
+        <mat-list-item>{{ result.name }}</mat-list-item>
+        <mat-list-item>{{ result.desc }}</mat-list-item>
       </mat-list>
     </ng-container>
   </div>

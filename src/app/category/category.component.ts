@@ -26,7 +26,7 @@ export class CategoryComponent implements OnInit {
     this.categories();
   }
   public get_category(category: string){
-    const categoryEdit = category.replace(' ', '-').toLowerCase();
+    const categoryEdit: string = category.replace(' ', '-').toLowerCase();
 
     this.categoryStore.getACategory(categoryEdit);
     this.router.navigate(['/results']);
