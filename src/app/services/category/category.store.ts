@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, BehaviorSubject, of } from 'rxjs';
-import { map, tap, mergeMap } from 'rxjs/operators';
+import { Observable, BehaviorSubject, from, of } from 'rxjs';
+import { map, tap, mergeMap, concatMap } from 'rxjs/operators';
 
 import { CategoryService } from './category.service';
 
@@ -18,24 +18,29 @@ export class CategoryStore {
   public getSubjectStorageDetails$: Observable<OnlineStorageDetails[]>  = this.subjectStorageDetails$.asObservable();
 
   public constructor(private categoryService: CategoryService){}
-  /*public getACategoryDetail(category: string){
-    this.categoryService.getACategoryDetail(category).pipe(
-      tap(results => this.subjectStorageDetails$.next(results))
-    ).subscribe(); 
-  }*/
   async getACategoryDetail(category: string, online_storage_apps: string){
     await this.categoryService.getOnlineStorageApps(online_storage_apps).pipe(
-      map(apps => { 
-        return apps.map(app => { 
-          return app.app 
+      map(apps => {
+        return apps.map(app => {
+          return app.app
         })}
       ),
       mergeMap(result => {
-        return this.categoryService.getACategoryDetail2(category, result[0]).pipe(
+        return from(result).pipe(
+          concatMap(val => {return of(val).pipe(
+            tap(val => {return val})
+          )})
+        )
+      }),
+      mergeMap(result => {
+        return this.categoryService.getACategoryDetail2(category, result).pipe(
           tap(result => {return result})
         )
       }),
-      tap(result => this.subjectStorageDetails$.next(result))
+      tap(result => {
+        console.log(result);
+        this.subjectStorageDetails$.next(result);
+      })
     ).subscribe();
   }
 }
