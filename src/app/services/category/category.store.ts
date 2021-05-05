@@ -38,7 +38,6 @@ export class CategoryStore {
         )
       }),
       tap(result => {
-        console.log(result);
         this.subjectStorageDetails$.next(result);
       })
     ).subscribe();

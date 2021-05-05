@@ -19,5 +19,8 @@ export class ResultsComponent implements OnInit {
   public constructor(private categoryStore: CategoryStore){}
   public ngOnInit(){
     this.resultsStorageDetails$ = this.categoryStore.getSubjectStorageDetails$;
+    this.resultsStorageDetails$.pipe(
+      tap(result => console.log(result))
+    ).subscribe()
   }
 }
