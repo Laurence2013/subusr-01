@@ -26,9 +26,10 @@ export class CategoryComponent implements OnInit {
     this.categories();
   }
   public get_category(category: string){
+    const online_storage_apps: string = 'online-storage-apps';
     const categoryEdit: string = category.replace(' ', '-').toLowerCase();
 
-    this.categoryStore.getACategory(categoryEdit);
+    this.categoryStore.getACategoryDetail(categoryEdit, online_storage_apps);
     this.router.navigate(['/results']);
   }
   private categories(){

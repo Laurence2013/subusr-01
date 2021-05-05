@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CategoryStore } from '../services/category/category.store';
 
-import { OnlineStorage } from '../model/online-storage';
+import { OnlineStorageDetails } from '../model/online-storage-details';
 
 import { Observable } from 'rxjs';
 import { tap, map, shareReplay } from 'rxjs/operators';
@@ -14,10 +14,10 @@ import { tap, map, shareReplay } from 'rxjs/operators';
 })
 export class ResultsComponent implements OnInit {
 
-  public results$: Observable<OnlineStorage[]> | undefined;
+  public resultsStorageDetails$: Observable<OnlineStorageDetails[]> | undefined;
 
   public constructor(private categoryStore: CategoryStore){}
   public ngOnInit(){
-    this.results$ = this.categoryStore.getSubject$;
+    this.resultsStorageDetails$ = this.categoryStore.getSubjectStorageDetails$;
   }
 }

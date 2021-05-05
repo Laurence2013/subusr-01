@@ -9,10 +9,11 @@
         <a href="#"><img class="search-icon" src="../../assets/zoom-73.png"></a>
       </form>
     </div>
-    <ng-container *ngFor="let result of (results$ | async)">
+    <ng-container *ngFor="let result of (resultsStorageDetails$ | async)">
       <mat-list>
         <mat-list-item>{{ result.name }}</mat-list-item>
-        <mat-list-item>{{ result.desc }}</mat-list-item>
+        <mat-list-item>{{ result.desc.monthly }}</mat-list-item>
+        <mat-list-item>{{ result.desc.yearly_price }}</mat-list-item>
       </mat-list>
     </ng-container>
   </div>
